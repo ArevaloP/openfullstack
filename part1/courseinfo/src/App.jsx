@@ -2,21 +2,29 @@
 const Header = (props) => {
   return (
     <h1>{props.course}</h1>
+  );
+}
+
+export const Part = (props) => {
+  return (
+    <span>{props.text}</span>
   )
 }
+
 
 const Content = (props) => {
   return (
     <p>
-      {props.part} {props.exercises}
+      <Part text={props.part} />
+      <Part text={props.exercises} />
     </p>
-  )
+  );
 }
 
 const Total = (props) => {
   return (
     <p>Number of exercises {props.total}</p>
-  )
+  );
 }
 
 
